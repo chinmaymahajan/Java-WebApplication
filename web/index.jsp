@@ -14,9 +14,11 @@
     </head>
     <body>
         <div id="loginPanel">
+            <form action="login" method="post">
             Username : <input type="text" name="uname">
             Password : <input type="password" name="password">
             <input type="submit" name="Login">
+            </form>
         </div>
     </body>
 </html>

@@ -18,7 +18,7 @@ import org.dreamscoder.model.LoginService;
  *
  * @author chinmay
  */
-@WebServlet("/Login")
+@WebServlet("/login")
 public class Login extends HttpServlet {
     /**
      * Handles the HTTP <code>POST</code> method.
