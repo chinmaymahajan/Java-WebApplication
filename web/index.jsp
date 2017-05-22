@@ -13,12 +13,15 @@
       <link rel="stylesheet" type="text/css" href="style/default.css">
     </head>
     <body>
+     
         <div id="loginPanel">
             <form action="login" method="post">
             Username : <input type="text" name="uname">
             Password : <input type="password" name="password">
-            <input type="submit" name="Login">
+            <input type="submit" name="Login" value="Login">
             </form>
         </div>
+        
+       
     </body>
 </html>

@@ -4,6 +4,7 @@
     Author     : chinmay
 --%>
 
+<%@page import="org.dreamscoder.model.Users"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -13,6 +14,11 @@
     </head>
     <body>
         <h2>Welcome here</h2>
+        <%
+        Users user = (Users) request.getAttribute("u");
+        
+        %>
+        <%= user.getUsername() %>
         
     </body>
 </html>

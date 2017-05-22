@@ -7,12 +7,14 @@ package org.dreamscoder.controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.dreamscoder.model.LoginService;
+import org.dreamscoder.model.Users;
 
 /**
  *
@@ -38,7 +40,11 @@ public class Login extends HttpServlet {
        Boolean result = loginService.loginAuthentication(uname, password);
        
        if(result){
-       response.sendRedirect("dashboard.jsp");
+           Users user = loginService.getUsername(uname);
+           request.setAttribute("u", user);
+           RequestDispatcher requestDispatcher = request.getRequestDispatcher("dashboard.jsp");
+           requestDispatcher.forward(request, response);
+       
        }
        else{
            response.sendRedirect("index.jsp");
